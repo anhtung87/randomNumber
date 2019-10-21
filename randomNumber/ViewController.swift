@@ -18,12 +18,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         numberLabelView.text = "0"
-        numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 75)
+        numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 575)
         
         buttonView.setTitle("Random", for: UIControl.State.normal)
         buttonView.layer.cornerRadius = 16
-        buttonView.layer.borderWidth = 2
+        buttonView.layer.borderWidth = 3
         buttonView.layer.borderColor = UIColor.systemIndigo.cgColor
+        buttonView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 575)
+        
+        UIView.animate(withDuration: 1) {
+            self.numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 75)
+            self.buttonView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 75)
+        }
     }
 
     @IBAction func onPress(_ sender: Any) {
