@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         buttonView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 575)
         
         UIView.animate(withDuration: 1) {
-            self.numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 75)
-            self.buttonView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 75)
+            self.numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 125)
+            self.buttonView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 125)
         }
     }
 
