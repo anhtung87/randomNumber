@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         numberLabelView.text = "0"
-        numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 125)
+        numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 100)
         
         buttonView.setTitle("Random", for: UIControl.State.normal)
         buttonView.layer.cornerRadius = 16
@@ -33,9 +33,17 @@ class ViewController: UIViewController {
         numberLabelView.text = String(newNumber)
         numberLabelView.alpha = 0
         
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 1.7) {
             self.numberLabelView.alpha = 1
         }
+        
+        UIView.animate(withDuration: 0.1) {
+            self.numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 135)
+        }
+        
+        UIView.animate(withDuration: 0.9, delay: 0.1, animations: {
+            self.numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 100)
+        })
     }
 }
 
