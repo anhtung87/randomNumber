@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         numberLabelView.text = String(newNumber)
         numberLabelView.alpha = 0
         
-        UIView.animate(withDuration: 1.7) {
+        UIView.animate(withDuration: 1.7, delay: 0.1, animations: {
             self.numberLabelView.alpha = 1
-        }
+        })
         
         UIView.animate(withDuration: 0.1) {
             self.numberLabelView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 135)
